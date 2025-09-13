@@ -14,6 +14,8 @@
             {% csrf_token %}
             <p>Tem certeza que deseja deletar {{ musica.titulo }}</p>
             <button type="submit">Sim</button>
+            <a href="{% url 'lermusicas' %}">Cancelar</a>
+
         </form>
     </body>
 </html>

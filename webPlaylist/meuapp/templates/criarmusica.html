@@ -13,7 +13,9 @@
         <form method="post">
             {% csrf_token %} 
             {{ musica.as_p }}
-            <button type="submit">Adicionar música</button>
+            <button type="submit">Adicionar música</button> <br>
+            <a href="{% url 'lermusicas' %}">Cancelar</a>
+
         </form>
     </body>
 </html>
