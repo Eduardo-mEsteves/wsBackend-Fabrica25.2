@@ -20,3 +20,10 @@ def criarartista(request):
     else:
         form = ArtistaForm()
     return render(request, 'criarartista.html', {'artista': form})
+
+def deletarartista(request, pk):
+    artista = Artista.objects.get(pk=pk)
+    if request.method == 'POST':
+        artista.delete()
+        return redirect('lerartistas')
+    return render(request, 'deletarartista.html', {'artista': artista})

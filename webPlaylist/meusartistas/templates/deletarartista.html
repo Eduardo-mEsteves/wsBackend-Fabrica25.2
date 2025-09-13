@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>  
-        <title>Deletar musica</title>
+        <title>Deletar artista</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="">
 
@@ -12,9 +12,9 @@
     <body>
         <form method="post">
             {% csrf_token %}
-            <p>Tem certeza que deseja deletar {{ musica.titulo }}</p>
+            <p>Tem certeza que deseja deletar {{ artista.nome }}</p>
             <button type="submit">Sim</button>
-            <a href="{% url 'lermusicas' %}">Cancelar</a>
+            <a href="{% url 'lerartistas' %}">Cancelar</a>
 
         </form>
     </body>
