@@ -87,9 +87,36 @@ def atualizarmusica(request, pk):
     musica = Musica.objects.get(pk=pk)
     if request.method == 'POST':
         form = MusicaForm(request.POST, instance=musica)
+
         if form.is_valid():
-            form.save()
-            return redirect('lermusicas')
+            titulo = form.cleaned_data['titulo']
+            album = form.cleaned_data['album']
+            
+            # Consulta no iTunes
+            dados = buscarmusicaitunes(titulo, album)
+            
+            if dados:
+                # Verifica duplicata ignorando a própria música
+                existe = Musica.objects.filter(
+                    titulo=dados['nome'],
+                    album=dados['album']
+                ).exclude(pk=musica.pk).exists()
+                
+                if existe:
+                    form.add_error('titulo', 'Já existe outra música com este título e álbum')
+                else:
+                    # Atualiza os campos
+                    musica.titulo = dados['nome']
+                    musica.artista = dados['artista']
+                    musica.album = dados['album']
+                    musica.ano_lancamento = int(dados['ano']) if dados['ano'].isdigit() else 0
+                    musica.capa_url = dados.get('capa', '')
+                    musica.save()
+                    return redirect('lermusicas')
+            else:
+                form.add_error('titulo', 'Música não encontrada, tente alguma outra')
+
+              
     else:
         form = MusicaForm(instance=musica)
     return render(request, 'criarmusica.html', {'musica': form})
