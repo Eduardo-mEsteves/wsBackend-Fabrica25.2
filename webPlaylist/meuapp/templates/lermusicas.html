@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>Sua playlist</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="">
+
+
+    </head>
+
+    <body>
+        {% for musica in musicas %}
+        <h1>{{ musica.titulo}}</h1>
+        <ul>
+            <li>Álbum: {{ musica.album }}</li>
+            <li>Artista: {{ musica.artista }}</li>
+            <li>Lançamento: {{ musica.ano_lancamento }}</li>
+           <!--Aqui ficarão dois dados que serão acessados pela API-->
+           <!---->
+            <a href="" class="deletarmusica">DELETAR</a>
+        </ul>
+        <hr>
+        {% endfor %} 
+        <a href="{% url 'criarmusica' %}">Criar musica</a> <br>
+        <a href="{% url 'homeplaylist' %}">Voltar ao menu</a>
+
+
+    </body>
+</html>
