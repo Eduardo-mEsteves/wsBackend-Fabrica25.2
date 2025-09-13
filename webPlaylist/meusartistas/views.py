@@ -27,3 +27,14 @@ def deletarartista(request, pk):
         artista.delete()
         return redirect('lerartistas')
     return render(request, 'deletarartista.html', {'artista': artista})
+
+def atualizarartista(request, pk):
+    artista = Artista.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = ArtistaForm(request.POST, instance=artista)
+        if form.is_valid():
+            form.save()
+            return redirect('lerartistas')
+    else:
+        form = ArtistaForm(instance=artista)
+    return render(request, 'criarartista.html', {'artista': form})

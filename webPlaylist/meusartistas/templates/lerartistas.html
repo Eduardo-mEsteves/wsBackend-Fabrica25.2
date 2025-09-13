@@ -16,7 +16,7 @@
             <li>Nascimento: {{ artista.nascimento }}</li>
             <li>Origem: {{ artista.origem }}</li>
             <li>Estilo: {{ artista.estilo }}</li>
-            <a href="">Atualizar artista</a> <br> 
+            <a href="{% url 'atualizarartista' artista.id %}">Atualizar artista</a> <br> 
             <a href="{% url 'deletarartista' artista.id %}" class="deletarartista">DELETAR</a>
         </ul>
         <hr>
