@@ -18,7 +18,7 @@
             <li>Lançamento: {{ musica.ano_lancamento }}</li>
            <!--Aqui ficarão dois dados que serão acessados pela API-->
            <!---->
-            <a href="" class="deletarmusica">DELETAR</a>
+            <a href="{% url 'deletarmusica' musica.id  %}" class="deletarmusica">DELETAR</a>
         </ul>
         <hr>
         {% endfor %} 
