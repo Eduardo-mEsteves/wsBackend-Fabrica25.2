@@ -1,3 +1,12 @@
 from django.db import models
 
 # Create your models here.
+class Artista(models.Model):
+    nome = models.CharField(max_length=100, unique=True)
+    nascimento = models.PositiveIntegerField()
+    origem = models.CharField(blank=True, null=True)
+    estilo = models.CharField(max_length=100)
+    #imagem = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return self.nome

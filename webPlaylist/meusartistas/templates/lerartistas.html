@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>Sua playlist</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="">
+
+
+    </head>
+
+    <body>  
+        {% for artista in artistas %}
+        <h1>{{ artista.nome }}</h1>
+        <ul>
+            <li>Nascimento: {{ artista.nascimento }}</li>
+            <li>Origem: {{ artista.origem }}</li>
+            <li>Estilo: {{ artista.estilo }}</li>
+            <a href="">Atualizar artista</a> <br> 
+            <a href="" class="deletarartista">DELETAR</a>
+        </ul>
+        <hr>
+        {% endfor %} 
+        <a href="{% url 'criarartista' %}">Criar artista</a> <br> 
+        <a href="{% url 'homeartistas' %}">Voltar ao menu</a> 
+
+
+    </body>
+</html>

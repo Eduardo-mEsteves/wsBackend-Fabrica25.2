@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Criar musica</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="">
+
+    </head>
+
+    <body>
+        <h1>Cadastrar um novo artista</h1>
+        <form method="post">
+            {% csrf_token %} 
+            {{ artista.as_p }}
+            <button type="submit">Adicionar artista</button> <br>
+            <a href="{% url 'lerartistas' %}">Cancelar</a>
+
+        </form>
+    </body>
+</html>
