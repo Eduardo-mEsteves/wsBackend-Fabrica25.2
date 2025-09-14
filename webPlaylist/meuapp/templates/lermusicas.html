@@ -4,7 +4,7 @@
     <head>  
         <title>Sua playlist</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'css/lermusicas.css' %}">
 
 
     </head>
@@ -13,18 +13,21 @@
         {% for musica in musicas %}
         <h1>{{ musica.titulo}}</h1>
         <ul>
-            <li>Álbum: {{ musica.album }}</li>
-            <li>Artista: {{ musica.artista }}</li>
-            <li>Lançamento: {{ musica.ano_lancamento }}</li>
-            <img src="{{ musica.capa_url }}" alt="Capa do álbum"> <br>
-            <a href="{% url 'atualizarmusica' musica.id %}">Atualizar música</a> <br>
-            <a href="{% url 'deletarmusica' musica.id  %}" class="deletarmusica">DELETAR</a>
+            <div class="musica">
+                <li>Álbum: <span class="nome">{{ musica.album }}</span></li>
+                <li>Artista: <span class="nome">{{ musica.artista }}</span></li>
+                <li>Lançamento: <span class="nome">{{ musica.ano_lancamento }}</span></li>
+                <img src="{{ musica.capa_url }}" alt="Capa do álbum"> <br>
+                <a href="{% url 'atualizarmusica' musica.id %}">Atualizar música</a> <br>
+                <a href="{% url 'deletarmusica' musica.id  %}" class="deletarmusica">DELETAR</a>
+            </div>
         </ul>
         <hr>
         {% endfor %} 
-        <a href="{% url 'criarmusica' %}">Criar musica</a> <br>
+        <div class="acoes">
+        <a href="{% url 'criarmusica' %}">Criar música</a>
+       
         <a href="{% url 'homeplaylist' %}">Voltar ao menu</a>
-
-
+    </div>
     </body>
 </html>

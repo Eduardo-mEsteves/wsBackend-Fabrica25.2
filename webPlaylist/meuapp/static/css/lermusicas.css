@@ -1,0 +1,101 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, rgb(0,32,0), rgb(0,64,0));
+    font-family: Roboto, Montserrat, Lato, Open Sans, Poppins;
+    color: rgb(173, 255, 173);
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 5vh;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+    margin-left: 5vh;
+}
+
+h1:hover {
+    color: rgb(0, 73, 0);
+}
+
+.musica {
+    background-color: rgba(173, 255, 173, 0.1);
+    border-left: 5px solid rgb(173, 255, 173);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.musica:hover {
+    transform: scale(1.02);
+    background-color: rgba(173, 255, 173, 0.2);
+}
+
+.musica ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.musica li {
+    margin-bottom: 5px;
+}
+
+.musica img {
+    max-width: 150px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.musica img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo links dentro dos blocos */
+.musica a {
+    color: rgb(173, 255, 173);
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.5s;
+}
+
+.musica a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(5, 12, 4);
+    font-size: 3vh;
+    border-radius: 15vh;
+}
+
+.nome {
+    transition: color 0.2s;
+}
+
+.nome:hover {
+    color: rgb(255, 255, 255);
+}
+
+.acoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.acoes a {
+    display: inline-block;
+    padding: 1vh 3vh;
+    border-radius: 15vh;
+    background-color: rgb(0, 73, 0);
+    color: rgb(173, 255, 173);
+    font-size: 2.2vh;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.acoes a:hover {
+    background-color: rgb(0, 129, 4);
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}

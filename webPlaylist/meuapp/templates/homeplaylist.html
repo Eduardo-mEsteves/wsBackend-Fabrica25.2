@@ -4,14 +4,14 @@
     <head>  
         <title>Página Inicial</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'css/homeplaylist.css' %}">
 
     </head>
 
     <body>
-        <h1><u>BEM-VINDO</u></h1>
+        <img src="{% static 'meu_app\imagens\logo.png' %}">
+        <h1>Biblioteca Musical</h1>
         <h2>Escolha o que quer fazer hoje</h2>
-        <h3><a href="{% url 'criarmusica' %}">Adicionar músicas</a></h3>
-        <h3><a href="{% url 'lermusicas' %}">Ver Músicas</a></h3>
+        <h3><a href="{% url 'criarmusica' %}">adicionar músicas</a> | <a href="{% url 'lermusicas' %}">ver músicas</a></h3>
     </body>
 </html>

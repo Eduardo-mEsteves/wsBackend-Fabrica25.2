@@ -4,12 +4,12 @@
     <head>
         <title>Criar musica</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'css/criarmusica.css' %}">
 
     </head>
 
     <body>
-        <h1>Cadastrar nova musica na playlist</h1>
+        <h1>Cadastrar nova musica na playlist</h1> <br>
         <form method="post">
             {% csrf_token %} 
             {{ musica.as_p }}
