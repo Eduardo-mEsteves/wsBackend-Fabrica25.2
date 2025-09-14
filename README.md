@@ -98,6 +98,13 @@ python manage.py runserver
 
 ---
 
+## Observações sobre API
+
+- A API usada as vezes acaba passando por problemas na hora de encontrar os resultados esperados, entregando resultados não desejados ou simplesmente não entregando. Fora isso, a API está com o devido funcionamento nas aplicações.
+
+
+---
+
 ## Autor 
 
 - Eduardo da Franca Maciel Esteves
