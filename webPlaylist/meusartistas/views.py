@@ -5,6 +5,8 @@ from .forms import ArtistaForm
 import requests
 
 # Create your views here.
+def homeplaylist(request):
+    return render(request, 'homeplaylist.html')
 
 def homeartistas(request):
     return render(request, 'homeartistas.html')

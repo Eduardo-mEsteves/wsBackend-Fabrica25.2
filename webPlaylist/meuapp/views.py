@@ -8,6 +8,9 @@ from .forms import MusicaForm
 
 import requests
 
+def homeartistas(request):
+    return render(request, 'homeartistas.html')
+
 def buscarmusicaitunes(titulo, album):
     url = "https://itunes.apple.com/search"
     params = {

@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(to bottom, rgb(0,32,0), rgb(0,64,0));
+    background: linear-gradient(to bottom, rgb(4, 1, 14), rgb(0, 58, 158));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -18,7 +18,7 @@ body {
 h1 {
     font-family: Roboto, Montserrat, Lato, Open Sans, Poppins;
     font-size: 7vh;
-    color: rgb(173, 255, 173);
+    color: rgb(173, 199, 255);
     text-decoration: underline;  
     transition: transform, 0.2s;
 }
@@ -26,7 +26,7 @@ h1 {
 h1:hover {
     font-family: Roboto, Montserrat, Lato, Open Sans, Poppins;
     font-size: 7vh;
-    color: rgb(0, 73, 0);
+    color: rgb(0, 40, 73);
     text-decoration: underline;
     transition: transform, 0.2s;  
 }
@@ -34,21 +34,21 @@ h1:hover {
 h2 {
     font-family: Roboto, Montserrat, Lato, Open Sans, Poppins;
     font-size: 3vh;
-    color: rgb(18, 163, 18);
+    color: rgb(18, 81, 163);
     transition: transform, 0.2s;
 }
 
 h2:hover {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 3.5vh;
-    color: rgb(18, 163, 18);
+    color: rgb(18, 42, 163);
     transition: transform, 0.2s;
 }
 
 a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2vh;
-    color: rgb(0, 59, 2);
+    color: rgb(2, 0, 59);
     text-decoration: none;
     background-color: rgb(255, 255, 255);
     padding: 1vh;
@@ -59,7 +59,7 @@ a {
 a:hover {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 4vh;
-    color: rgb(0, 129, 4);
+    color: rgb(26, 0, 129);
     text-decoration: none;
     background-color: rgb(255, 255, 255);
     padding: 1vh;

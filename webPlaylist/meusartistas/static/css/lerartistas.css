@@ -1,9 +1,9 @@
 html, body {
     height: 100%;
     margin: 0;
-    background: linear-gradient(to bottom, rgb(0,32,0), rgb(0,64,0));
+    background: linear-gradient(to bottom, rgb(4, 1, 14), rgb(0, 58, 158));
     font-family: Roboto, Montserrat, Lato, Open Sans, Poppins;
-    color: rgb(173, 255, 173);
+    color: rgb(173, 199, 255);
     background-attachment: fixed;
 }
 
@@ -16,12 +16,12 @@ h1 {
 }
 
 h1:hover {
-    color: rgb(0, 73, 0);
+    color: rgb(0, 69, 125);
 }
 
 .musica {
-    background-color: rgba(173, 255, 173, 0.1);
-    border-left: 5px solid rgb(173, 255, 173);
+    background-color: rgba(173, 199, 255, 0.1);
+    border-left: 5px solid rgb(173, 199, 255);
     padding: 15px 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -31,7 +31,7 @@ h1:hover {
 
 .musica:hover {
     transform: scale(1.02);
-    background-color: rgba(173, 255, 173, 0.2);
+    background-color: rgba(173, 199, 255, 0.2);
 }
 
 .musica ul {
@@ -54,16 +54,15 @@ h1:hover {
     transform: scale(1.05);
 }
 
-/* Estilo links dentro dos blocos */
 .musica a {
-    color: rgb(173, 255, 173);
+    color: rgb(173, 199, 255);
     text-decoration: none;
     transition: transform 0.2s, background-color 0.5s;
 }
 
 .musica a:hover {
     color: rgb(255, 255, 255);
-    background-color: rgb(5, 12, 4);
+    background-color: rgb(0, 40, 73);
     font-size: 3vh;
     border-radius: 15vh;
 }
@@ -87,15 +86,15 @@ h1:hover {
     display: inline-block;
     padding: 1vh 3vh;
     border-radius: 15vh;
-    background-color: rgb(0, 73, 0);
-    color: rgb(173, 255, 173);
+    background-color: rgb(0, 40, 73);
+    color: rgb(173, 199, 255);
     font-size: 2.2vh;
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .acoes a:hover {
-    background-color: rgb(0, 129, 4);
+    background-color: rgb(0, 58, 158);
     color: rgb(255, 255, 255);
     transform: scale(1.05);
 }

@@ -7,5 +7,7 @@ urlpatterns = [
     path('lerartistas', lerartistas, name='lerartistas'),
     path('criarartista', criarartista, name='criarartista'),
     path('deletarartista/<int:pk>', deletarartista, name='deletarartista'),
-    path('atualizarartista/<int:pk>', atualizarartista, name='atualizarartista')
+    path('atualizarartista/<int:pk>', atualizarartista, name='atualizarartista'),
+    path('ver_homeplaylist/', views.homeplaylist, name='ver_homeplaylist'),
+
 ]

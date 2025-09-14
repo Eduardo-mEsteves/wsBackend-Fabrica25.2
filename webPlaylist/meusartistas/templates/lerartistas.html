@@ -4,7 +4,7 @@
     <head>  
         <title>Sua playlist</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'css/lerartistas.css' %}">
 
 
     </head>
@@ -13,17 +13,21 @@
         {% for artista in artistas %}
         <h1>{{ artista.nome }}</h1>
         <ul>
-            <li>Origem: {{ artista.origem|default:"Não especificado" }}</li>
-            <li>Estilo: {{ artista.estilo|default:"Não especificado" }}</li>
-            <li>Número de álbuns: {{ artista.album_count|default:"Não especificado" }} (Envolve singles, LPs, etc)</li>
-            <img src="{{ artista.imagem }}" alt="Ilustração do artista"> <br>
-            <a href="{% url 'atualizarartista' artista.id %}">Atualizar artista</a> <br> 
-            <a href="{% url 'deletarartista' artista.id %}" class="deletarartista">DELETAR</a>
+            <div class="musica">
+                <li>Origem: {{ artista.origem|default:"Não especificado" }}</li>
+                <li>Estilo: {{ artista.estilo|default:"Não especificado" }}</li>
+                <li>Número de álbuns: {{ artista.album_count|default:"Não especificado" }} (Envolve singles, LPs, etc)</li>
+                <img src="{{ artista.imagem }}" alt="Ilustração do artista"> <br>
+                <a href="{% url 'atualizarartista' artista.id %}">Atualizar artista</a> <br> 
+                <a href="{% url 'deletarartista' artista.id %}" class="deletarartista">DELETAR</a>
+            </div>
         </ul>
         <hr>
         {% endfor %} 
-        <a href="{% url 'criarartista' %}">Criar artista</a> <br> 
-        <a href="{% url 'homeartistas' %}">Voltar ao menu</a> 
+        <div class="acoes">
+            <a href="{% url 'criarartista' %}">Criar artista</a> <br> 
+            <a href="{% url 'homeartistas' %}">Voltar ao menu</a> 
+        </div>
 
 
     </body>

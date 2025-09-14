@@ -4,14 +4,15 @@
     <head>  
         <title>Página Inicial</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'css/homeartistas.css' %}">
 
     </head>
 
     <body>
-        <h1><u>BEM-VINDO</u></h1>
+        <h1><u>SUA COLEÇÃO DE ARTISTAS  </u></h1>
         <h2>Escolha o que quer fazer hoje</h2>
         <h3><a href="{% url 'criarartista' %}">Adicionar artistas</a></h3>
         <h3><a href="{% url 'lerartistas' %}">Ver artistas</a></h3>
+        <a href="{% url 'ver_homeplaylist' %}">Ver Playlist</a>
     </body>
 </html>

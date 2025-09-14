@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title>Página Inicial</title>
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+        <h1>Para onde deseja ir?</h1>
+        <h2>Escolha o que quer fazer hoje</h2>
+        <a href="{% url 'homeplaylist' %}">Ver Playlist</a>
+        <a href="{% url 'homeartistas' %}">Ver Artistas</a>
+    </body>
+</html>

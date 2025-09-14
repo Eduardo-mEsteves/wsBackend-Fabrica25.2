@@ -8,4 +8,5 @@ urlpatterns = [
     path('criarmusica', criarmusica, name='criarmusica'),
     path('atualizarmusica/<int:pk>', atualizarmusica, name='atualizarmusica'),
     path('deletarmusica/<int:pk>', deletarmusica, name='deletarmusica'),
+    path('ver_homeartistas/', views.homeartistas, name='ver_homeartistas'),
 ]
